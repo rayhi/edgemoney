@@ -1,12 +1,12 @@
 {
     "name": "edgetech/mobilemoney",
     "description": ":description",
-    "license": "Commercial",
+    "license": "OSL-1.1",
     "authors": [
         {
             "name": "Raymond Sigey",
             "email": "rsigei@edgetech.co.ke",
-            "homepage": "edgetec.co.ke"
+            "homepage": "https://edgetech.co.ke"
         }
     ],
     "homepage": "https://github.com/edgetech/mobilemoney",
