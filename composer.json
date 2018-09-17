@@ -1,0 +1,41 @@
+{
+    "name": "edgetech/mobilemoney",
+    "description": ":description",
+    "license": "Commercial",
+    "authors": [
+        {
+            "name": "Raymond Sigey",
+            "email": "rsigei@edgetech.co.ke",
+            "homepage": "edgetec.co.ke"
+        }
+    ],
+    "homepage": "https://github.com/edgetech/mobilemoney",
+    "keywords": ["Laravel", "MobileMoney"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edgetech\\MobileMoney\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Edgetech\\MobileMoney\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Edgetech\\MobileMoney\\MobileMoneyServiceProvider"
+            ],
+            "aliases": {
+                "MobileMoney": "Edgetech\\MobileMoney\\Facades\\MobileMoney"
+            }
+        }
+    }
+}
