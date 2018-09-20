@@ -6,7 +6,7 @@
  * Time: 5:56 PM
  */
 
-Route::group([
+Route::group(['prefix' => 'mpesa/',
     'namespace' => 'Edgetech\MobileMoney\src\Mpesa\Http\Controllers'
 ], function () {
     Route::get('mobilemoney', 'MpesaController@index');
@@ -25,4 +25,6 @@ Route::group([
     'namespace'=>'Edgetech\MobileMoney\src\AirtelMoney\Http\Controllers'
     ],function (){
     Route::any('airtelquery', 'AirtelController@request');
+    Route::any('airtelbalance', 'AirtelController@getbalance');
+    Route::any('airtelb2c', 'AirtelController@makepayment');
 });

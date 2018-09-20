@@ -8,7 +8,7 @@
 
 namespace Edgetech\MobileMoney\src\AirtelMoney\Http\Controllers;
 use App\Http\Controllers\Controller;
-use Edgetech\MobileMoney\src\AirtelMoney\Library\AirtelLib;
+use Edgetech\MobileMoney\src\AirtelMoney\Library\AirtelMoney;
 use Carbon\Carbon;
 class AirtelController extends Controller
 {
@@ -16,21 +16,27 @@ class AirtelController extends Controller
     private $timeTo;
     private $timeFrom;
     /**
-     * @var AirtelLib
+     * @var AirtelMoney
      */
     protected $airtel;
-    public function __construct(AirtelLib $airtel)
+    public function __construct(AirtelMoney $airtel)
     {
         $this->airtel = $airtel;
 
     }
 
     public function request($referenceId=null,$timeTo=null,$timeFrom=null){
-        $request_type = "RequestTransaction";
-        $ref ="1601056579194";//$referenceId ?: $this->referenceId;
+       // $request_type = "RequestTransaction";
+        //$ref ="1601056579194";//$referenceId ?: $this->referenceId;
         $to = str_replace(" ","",str_replace(":","",str_replace("-","",Carbon::now("Africa/Nairobi")->toDateTimeString())));
         $from = ($to-120);//$timeTo ?: $this->timeTo;
-        return $this->airtel->processMerchantQuery($ref,$request_type,$to,$from);
+        return $this->airtel->getTimeInterval($to,$from);
+    }
+    public function getbalance(){
+        return $this->airtel->getBalance();
+    }
+    public function makepayment(){
+        return $this->airtel->makepayment();
     }
 
 }

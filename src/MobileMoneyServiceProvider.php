@@ -3,7 +3,7 @@
 namespace Edgetech\MobileMoney;
 
 use Illuminate\Support\ServiceProvider;
-
+use Edgetech\MobileMoney\src\Mpesa\Execute\RegisterUrlCommand;
 class MobileMoneyServiceProvider extends ServiceProvider
 {
     /**
@@ -43,7 +43,9 @@ class MobileMoneyServiceProvider extends ServiceProvider
             ], 'mobilemoney.views');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                RegisterUrlCommand::class,
+            ]);
         }
     }
 

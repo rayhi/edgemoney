@@ -15,6 +15,7 @@ use Edgetech\Mpesa\Database\ModelEntities\MpesaBulkPaymentRequest;
 use Edgetech\Mpesa\Database\ModelEntities\MpesaBulkPaymentResponse;
 use Edgetech\Mpesa\Database\ModelEntities\MpesaC2bCallback;
 use Edgetech\Mpesa\Database\ModelEntities\MpesaStkCallback;
+use Edgetech\Mpesa\Database\ModelEntities\MobilePayments;
 
 class Mpesa
 {
@@ -143,5 +144,10 @@ class Mpesa
             }
         }
         return ['successful' => $success, 'errors' => $errors];
+    }
+
+    public function saverequest($data){
+        //save the request as new
+        MobilePayments::create($data);
     }
 }

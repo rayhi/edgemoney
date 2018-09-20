@@ -5,7 +5,7 @@ namespace Edgetech\Mpesa\Database\ModelEntities;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Samerior\MobileMoney\MobileMoney\Database\Entities\MpesaStkRequest
+ * Edgetech\Mpesa\Database\ModelEntities\MpesaStkRequest
  *
  * @property int $id
  * @property string $phone

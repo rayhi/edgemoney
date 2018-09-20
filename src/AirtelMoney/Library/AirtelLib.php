@@ -17,6 +17,13 @@ class AirtelLib
       //  ini_set("soap.wsdl_cache_enabled", "0");
     }
 
+    /**
+     * @param $REFERENCE_ID
+     * @param $request_type
+     * @param $timeTo
+     * @param $timeFrom
+     * @return \Exception|mixed|string
+     */
     public function processMerchantQuery($REFERENCE_ID,$request_type,$timeTo,$timeFrom){
 
         $username = \config('mobilemoney.airtelm.username');
