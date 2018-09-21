@@ -1,12 +1,12 @@
 <?php
 
-namespace Edgetech\Mpesa\Database\ModelEntities;
+namespace Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities;
 
 use Illuminate\Database\Eloquent\Model;
 
 /**
  * Class MpesaC2bCallback
- * @package Edgetech\MobileMoney\Database\ModelEntities
+ * @package Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities
  */
 class MpesaC2bCallback extends Model
 {

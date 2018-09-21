@@ -10,12 +10,12 @@ namespace Edgetech\MobileMoney\src\Mpesa\Library;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaStkRequest;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaBulkPaymentRequest;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaBulkPaymentResponse;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaC2bCallback;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaStkCallback;
-use Edgetech\Mpesa\Database\ModelEntities\MobilePayments;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaStkRequest;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaBulkPaymentRequest;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaBulkPaymentResponse;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaC2bCallback;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MobilePayments;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaStkCallback;
 
 class Mpesa
 {

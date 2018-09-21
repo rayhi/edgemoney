@@ -11,7 +11,7 @@ use Edgetech\MobileMoney\src\Mpesa\Library\CurlEngine;
 use GuzzleHttp\Exception\RequestException;
 use Ixudra\Curl\Facades\Curl;
 use Carbon\Carbon;
-use Edgetech\Mpesa\Database\ModelEntities\MpesaStkRequest;
+use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaStkRequest;
 use Illuminate\Support\Facades\Auth;
 
 class StkPush extends  CommonClass
