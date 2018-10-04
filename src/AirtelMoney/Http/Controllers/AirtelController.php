@@ -28,8 +28,8 @@ class AirtelController extends Controller
     public function request($referenceId=null,$timeTo=null,$timeFrom=null){
        // $request_type = "RequestTransaction";
         //$ref ="1601056579194";//$referenceId ?: $this->referenceId;
-        $to = str_replace(" ","",str_replace(":","",str_replace("-","",Carbon::now("Africa/Nairobi")->toDateTimeString())));
-        $from = ($to-120);//$timeTo ?: $this->timeTo;
+        $to = (int) str_replace(" ","",str_replace(":","",str_replace("-","",Carbon::now("Africa/Nairobi")->toDateTimeString())));
+        $from = (int) str_replace(" ","",str_replace(":","",str_replace("-","",Carbon::now("Africa/Nairobi")->subHours(24)->toDateTimeString())));
         return $this->airtel->getTimeInterval($to,$from);
     }
     public function getbalance(){

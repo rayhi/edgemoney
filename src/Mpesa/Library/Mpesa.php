@@ -10,6 +10,7 @@ namespace Edgetech\MobileMoney\src\Mpesa\Library;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaStkRequest;
 use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaBulkPaymentRequest;
 use Edgetech\MobileMoney\src\Mpesa\Database\ModelEntities\MpesaBulkPaymentResponse;

@@ -10,6 +10,8 @@ Route::group(['prefix' => 'mpesa/',
     'namespace' => 'Edgetech\MobileMoney\src\Mpesa\Http\Controllers'
 ], function () {
     Route::get('mobilemoney', 'MpesaController@index');
+    Route::get('login', 'MpesaController@index')->name('login');
+    Route::post('logout', 'MpesaController@index')->name('logout');
     Route::any('validate', 'MpesaController@validatepayment');
     Route::any('confirmation', 'MpesaController@confirmation');
     Route::any('callback', 'MpesaController@callback');

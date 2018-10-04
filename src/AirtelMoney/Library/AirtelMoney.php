@@ -29,9 +29,22 @@ class AirtelMoney extends CurlEngine
 
     }
     public function getTimeInterval($to,$from){
-        $body = $this->c2bgenerator->TimeIntervalDetailed($from,$to);
+       $body = $this->c2bgenerator->TimeIntervalDetailed($from,$to);
         $endpoint = "airtelc2b";
         $response = $this->SendRequest($body,$endpoint);
+        //save the requests
+        $main = $response['mRequestTransactionByTimeIntervalDetailedResponse']['mRequestTransactionByTimeIntervalDetailedResult']['javaTransactions'];
+       // var_dump(json_decode($main));
+        $response = explode(",",$main);
+        if(count($response) > 0){
+            foreach ($response as $response_details){
+                    $new_details = str_replace( array('[',']') , ''  , $response_details);
+                    $exploded = explode("#",$new_details);
+
+            }
+        }
+        //$exploded =
+       // var_dump($response);
         return $response;
     }
     public function getIntervalDetail(){
@@ -47,9 +60,10 @@ class AirtelMoney extends CurlEngine
 
     }
     public function makepayment(){
-        $referenceID =23;
-        $msisdn = 254736355183;
-        $amount = 100;
+        $referenceID =291;
+       // $msisdn = 254736355183;
+        $msisdn = 254733333554;
+        $amount = 500;
         $batchref = "123";
         $narrative = "Test Payment";
         $body = $this->b2cgenerator->TrxPayment($referenceID,$msisdn,$amount,$batchref,$narrative);
