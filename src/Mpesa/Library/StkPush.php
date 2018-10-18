@@ -118,6 +118,7 @@ class StkPush extends  CommonClass
         );
         $endpoint = $this->tokengenerator->build("stk_push");
         $response = $this->makeRequest($curl_post_data,$endpoint);
+        return json_encode($response);
         return $this->saveStkRequest($curl_post_data, (array)$response->content);
         // return response()->json($response);
     }

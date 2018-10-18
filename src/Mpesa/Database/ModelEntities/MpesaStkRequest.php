@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 class MpesaStkRequest extends Model
 {
     protected $guarded = [];
+    protected $table = "mpesa_stk_request";
 
     public function response()
     {

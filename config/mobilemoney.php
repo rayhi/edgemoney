@@ -48,6 +48,19 @@ return [
          * NOTE: You need to email MPESA to enable validation
          */
         'validation_url' => env('APP_URL') . '/validate',
+        /*
+       * This is the user initiating the transaction, usually from the MobileMoney organization portal
+       * Make sure this was the user who was used to 'GO LIVE'
+       * https://org.ke.m-pesa.com/
+       */
+        'initiator' => 'mtransferltd',
+        /*
+         * The user security credential.
+         * Go to https://developer.safaricom.co.ke/test_credentials and paste your initiator password to generate
+         * security credential
+         */
+        'security_credential' => 'Gm8PJxmllv+3XUR5TuuLgsje9W6JCK3MfTe9eWCqCxwVXvXyv6L1KCTDs/NgodxqtU9+ffiT69v7MBWwj4ieCRgq9kdBCEJSMoKUbZh+UPvILhfLC1OvDVYk3JFgipOYQNrFVn+xa25GJzHnaftEWQXaO7/0gA+RWBWqByju00Lbd74dwkAnSOWZEVbzdMXk+kLijKYIHm/iBCI+nIsBojN3CSSiHdr3lXVGVHOS4M+9EZfqRn/VaLSO3XQDCzO1P8CfZ9aSz7nCxxUt/w94MEGxYWP7xYQOyfkKU6kIOXXKN+bNDBW2UbGTJ8ovKbcoFUZy9iHcbbjccPwoS8DtwQ==',
+
     ],
     'b2c' => [
         /*
@@ -88,5 +101,19 @@ return [
         'msisdn' =>'254000000504',
         'password' =>'mtransf123$',
         'username' => '405405user',
+    ],
+    'airtelc2b'=>[
+        'password' =>'mtransf123$',
+        'username' => '405405user',
+        'nickname'=>'405405',
+        'endpoint'=>'https://airtelmoneymqtest.ke.airtel.com:8443/MerchantQueryService.asmx?WSDL',
+        // 'endpoint'=>'https://airtelmoneymq.ke.airtel.com:8446/MerchantQueryService.asmx?WSDL',
+    ],
+    'airtelb2c'=>[
+        'password' =>'transfer1234',
+        'username' => 'Mtrauser',
+        'nickname'=>'MTRANSFER',
+        // 'endpoint'=>'https://airtelmoneymq.ke.airtel.com:8446/MerchantPaymentService.asmx?WSDL',
+        'endpoint'=>'https://airtelmoneymqtest.ke.airtel.com:8443/MerchantPaymentService.asmx?WSDL',
     ],
 ];
