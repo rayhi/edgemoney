@@ -6,15 +6,15 @@ return [
         /*
          * Configure the minimum amount
          */
-        'mimimum_amount'=>50,
+        'mimimum_amount'=>0,
         /*
          * Consumer Key from developer portal
          */
-        'consumer_key' => 'Ei4lr5xbDZXS9XEAZ1BhNE4xCBcAYGVy',
+        'consumer_key' => '',
         /*
          * Consumer secret from developer portal
          */
-        'consumer_secret' => 'eMhCDmzFQyx1SNSZ',
+        'consumer_secret' => '',
         /*
          * HTTP callback method [POST,GET]
          */
@@ -22,11 +22,11 @@ return [
         /*
          * Your receiving paybill or till umber
          */
-        'short_code' => 600152,
+        'short_code' => ,
         /*
          * Passkey , requested from mpesa
          */
-        'passkey' => 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919',
+        'passkey' => '',
         /*
          * --------------------------------------------------------------------------------------
          * Callbacks:
@@ -53,7 +53,7 @@ return [
        * Make sure this was the user who was used to 'GO LIVE'
        * https://org.ke.m-pesa.com/
        */
-        'initiator' => 'mtransferltd',
+        'initiator' => '',
         /*
          * The user security credential.
          * Go to https://developer.safaricom.co.ke/test_credentials and paste your initiator password to generate
@@ -66,21 +66,21 @@ return [
         /*
          * Sending app consumer key
          */
-        'consumer_key' => 'Ei4lr5xbDZXS9XEAZ1BhNE4xCBcAYGVyA',
+        'consumer_key' => '',
         /*
          * Sending app consumer secret
          */
-        'consumer_secret' => 'eMhCDmzFQyx1SNSZ',
+        'consumer_secret' => '',
         /*
          * Shortcode sending funds
          */
-        'short_code' => 600000,
+        'short_code' => 0,
         /*
         * This is the user initiating the transaction, usually from the MobileMoney organization portal
         * Make sure this was the user who was used to 'GO LIVE'
         * https://org.ke.m-pesa.com/
         */
-        'initiator' => 'testapi',
+        'initiator' => '',
         /*
          * The user security credential.
          * Go to https://developer.safaricom.co.ke/test_credentials and paste your initiator password to generate
@@ -98,21 +98,21 @@ return [
     ],
     'airtelm'=>[
         'url' => 'https://airtelmoneymq.ke.airtel.com:8446/MerchantQueryService.asmx?WSDL',
-        'msisdn' =>'254000000504',
-        'password' =>'mtransf123$',
-        'username' => '405405user',
+        'msisdn' =>'',
+        'password' =>'',
+        'username' => '',
     ],
     'airtelc2b'=>[
-        'password' =>'mtransf123$',
-        'username' => '405405user',
-        'nickname'=>'405405',
+        'password' =>'',
+        'username' => '',
+        'nickname'=>'',
         'endpoint'=>'https://airtelmoneymqtest.ke.airtel.com:8443/MerchantQueryService.asmx?WSDL',
         // 'endpoint'=>'https://airtelmoneymq.ke.airtel.com:8446/MerchantQueryService.asmx?WSDL',
     ],
     'airtelb2c'=>[
-        'password' =>'transfer1234',
-        'username' => 'Mtrauser',
-        'nickname'=>'MTRANSFER',
+        'password' =>'',
+        'username' => '',
+        'nickname'=>'',
         // 'endpoint'=>'https://airtelmoneymq.ke.airtel.com:8446/MerchantPaymentService.asmx?WSDL',
         'endpoint'=>'https://airtelmoneymqtest.ke.airtel.com:8443/MerchantPaymentService.asmx?WSDL',
     ],
