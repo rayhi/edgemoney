@@ -16,7 +16,7 @@ class CurlEngine
         //
         $CONSUMER_KEY = "pTPNT1m5M7UJltMCGtJtXg9u187dDfNt";
         $CONSUMER_SECRET = "afEsVkXPSGUhO9Ic";
-        $url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+        $url = self::getEndpoint("auth");//'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
         $credentials = base64_encode($CONSUMER_KEY.":".$CONSUMER_SECRET);
         $response = Curl::to($url)
             ->withHeader('Authorization: Basic '.$credentials)

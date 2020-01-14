@@ -60,16 +60,20 @@ class AirtelMoney extends CurlEngine
 
     }
     public function makepayment(){
-        $referenceID =291;
-       // $msisdn = 254736355183;
-        $msisdn = 254733333554;
+        $referenceID =301;
+        $msisdn = 254736355183;
+        //$msisdn = 254733333554;
         $amount = 500;
         $batchref = "123";
         $narrative = "Test Payment";
         $body = $this->b2cgenerator->TrxPayment($referenceID,$msisdn,$amount,$batchref,$narrative);
         $endpoint= "airtelb2c";
         $response = $this->SendRequest($body,$endpoint);
-        return $response;
+        $xml_string = $response['mTrxPaymentResponse']['mTrxPaymentResult'];
+        $xml = simplexml_load_string($xml_string);
+        $json = json_encode($xml);
+        $array = json_decode($json,TRUE);
+        return $array['Status'];
 
     }
 
