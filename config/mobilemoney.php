@@ -59,7 +59,7 @@ return [
          * Go to https://developer.safaricom.co.ke/test_credentials and paste your initiator password to generate
          * security credential
          */
-        'security_credential' => ''
+        'security_credential' => '',
     ],
     'b2c' => [
         /*
@@ -85,7 +85,7 @@ return [
          * Go to https://developer.safaricom.co.ke/test_credentials and paste your initiator password to generate
          * security credential
          */
-        'security_credential' => ''
+        'security_credential' => '',
 		/*
          * Notification URL for timeout
          */
